@@ -50,14 +50,14 @@ public class PatentDemo {
         System.out.println("Сортировка объектов класса по номеру с помощью интерфейса Comparator");
         System.out.println(Arrays.toString(patents));
 
-        PatentRecord[] patentRecords=new PatentRecord[3];
-        patentRecords[0]=new PatentRecord(2,"Машина времени",new Inventor("A"));
-        patentRecords[1]=new PatentRecord(3,"Вакцина вечной жизни",new Inventor("B"));
-        patentRecords[2]=new PatentRecord(1,"ЗВЕЗДА СМЕРТИ",new Inventor("C"));
+        PatentRecord[] patentsRecord=new PatentRecord[3];
+        patentsRecord[0]=new PatentRecord(2,"Машина времени",new Inventor("A"));
+        patentsRecord[1]=new PatentRecord(3,"Вакцина вечной жизни",new Inventor("B"));
+        patentsRecord[2]=new PatentRecord(1,"ЗВЕЗДА СМЕРТИ",new Inventor("C"));
         
-        Arrays.sort(patentRecords);
+        Arrays.sort(patentsRecord);
         System.out.println("Сортировка объектов record-класса по номеру с помощью интерфейса Comparable");
-        System.out.println(Arrays.toString(patentRecords));
+        System.out.println(Arrays.toString(patentsRecord));
 
         Comparator<PatentRecord> byNumberRecord = new Comparator<PatentRecord>(){
             @Override
@@ -75,7 +75,7 @@ public class PatentDemo {
             }
         };
 
-        Comparator<PatentRecord> byinventorRecord = new Comparator<PatentRecord>(){
+        Comparator<PatentRecord> byInventorRecord = new Comparator<PatentRecord>(){
             @Override
             public int compare(PatentRecord obj1, PatentRecord obj2)
             {
@@ -83,16 +83,16 @@ public class PatentDemo {
             }
         };
 
-        Arrays.sort(patentRecords,byTopicRecord);
+        Arrays.sort(patentsRecord,byTopicRecord);
         System.out.println("Сортировка объектов record-класса по теме с помощью интерфейса Comparator");
-        System.out.println(Arrays.toString(patentRecords));
+        System.out.println(Arrays.toString(patentsRecord));
 
-        Arrays.sort(patentRecords,byinventorRecord);
+        Arrays.sort(patentsRecord,byInventorRecord);
         System.out.println("Сортировка объектов record-класса по имени изобретателя с помощью интерфейса Comparator");
-        System.out.println(Arrays.toString(patentRecords));
+        System.out.println(Arrays.toString(patentsRecord));
 
-        Arrays.sort(patentRecords,byNumberRecord);
+        Arrays.sort(patentsRecord,byNumberRecord);
         System.out.println("Сортировка объектов record-класса по номеру с помощью интерфейса Comparator");
-        System.out.println(Arrays.toString(patentRecords));
+        System.out.println(Arrays.toString(patentsRecord));
     }
 }
