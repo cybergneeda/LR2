@@ -30,7 +30,7 @@ public class PatentDemo {
             }
         };
 
-        Comparator<Patent> byinventor = new Comparator<Patent>(){
+        Comparator<Patent> byInventor = new Comparator<Patent>(){
             @Override
             public int compare(Patent obj1, Patent obj2)
             {
@@ -42,7 +42,7 @@ public class PatentDemo {
         System.out.println("Сортировка объектов класса по теме с помощью интерфейса Comparator");
         System.out.println(Arrays.toString(patents));
 
-        Arrays.sort(patents,byinventor);
+        Arrays.sort(patents,byInventor);
         System.out.println("Сортировка объектов класса по имени изобретателя с помощью интерфейса Comparator");
         System.out.println(Arrays.toString(patents));
 
